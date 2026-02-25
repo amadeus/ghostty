@@ -12,11 +12,13 @@
 				<string>vim</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Vim Script File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -26,7 +28,7 @@
 				<string>utf8</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/plain</string>
@@ -35,6 +37,8 @@
 			<string>Plain Text File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -47,11 +51,13 @@
 				<string>dtx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>TeX File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -59,7 +65,7 @@
 				<string>h</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C Header Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -68,6 +74,8 @@
 			<array>
 				<string>public.c-header</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -75,7 +83,7 @@
 				<string>pch</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C Precompiled Header Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -84,6 +92,8 @@
 			<array>
 				<string>public.precompiled-c-header</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -95,11 +105,13 @@
 				<string>h++</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C++ Header Source File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -107,7 +119,7 @@
 				<string>pch++</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C++ Precompiled Header Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -116,6 +128,8 @@
 			<array>
 				<string>public.precompiled-c-plus-plus-header</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -123,7 +137,7 @@
 				<string>c</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -132,6 +146,8 @@
 			<array>
 				<string>public.c-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -139,7 +155,7 @@
 				<string>m</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Objective-C Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -148,6 +164,8 @@
 			<array>
 				<string>public.objective-c-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -155,7 +173,7 @@
 				<string>mm</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Objective-C++ Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -164,6 +182,8 @@
 			<array>
 				<string>public.objective-c-plus-plus-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -175,7 +195,7 @@
 				<string>c++</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>C++ Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -184,6 +204,8 @@
 			<array>
 				<string>public.c-plus-plus-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -200,7 +222,9 @@
 				<string>public.assembler-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -216,7 +240,9 @@
 				<string>public.rez-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -225,7 +251,7 @@
 				<string>jav</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Java Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -234,6 +260,8 @@
 			<array>
 				<string>com.sun.java-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -253,7 +281,9 @@
 				<string>public.lex-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -273,7 +303,9 @@
 				<string>public.yacc-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -285,7 +317,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -301,7 +335,9 @@
 				<string>public.symbol-export</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -314,7 +350,7 @@
 				<string>f95</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Fortran Source File</string>
 			<key>CFBundleTypeRole</key>
@@ -323,6 +359,8 @@
 			<array>
 				<string>public.fortran-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -338,7 +376,9 @@
 				<string>public.pascal-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -356,7 +396,9 @@
 				<string>public.ada-source</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -374,7 +416,7 @@
 				<string>xhtm</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/html</string>
@@ -387,6 +429,8 @@
 			<array>
 				<string>public.html</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -399,7 +443,7 @@
 				<string>dtml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/xml</string>
@@ -412,6 +456,8 @@
 			<array>
 				<string>public.xml</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -422,7 +468,7 @@
 				<string>javascript</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/javascript</string>
@@ -435,6 +481,8 @@
 			<array>
 				<string>com.netscape.javascript-source</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -447,7 +495,7 @@
 				<string>perl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/x-perl-script</string>
@@ -458,6 +506,8 @@
 			<array>
 				<string>public.perl-script</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -470,7 +520,7 @@
 				<string>python</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/x-python-script</string>
@@ -481,6 +531,8 @@
 			<array>
 				<string>public.python-script</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -496,7 +548,7 @@
 				<string>phtml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/php</string>
@@ -507,6 +559,8 @@
 			<array>
 				<string>public.php-script</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -520,7 +574,7 @@
 				<string>rxml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/ruby-script</string>
@@ -531,6 +585,8 @@
 			<array>
 				<string>public.ruby-script</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -548,13 +604,15 @@
 				<string>bash_logout</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.shell-script</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -570,7 +628,7 @@
 				<string>com.sun.java-class</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -579,11 +637,13 @@
 				<string>diff</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Patch File</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -599,7 +659,9 @@
 				<string>public.strings-text</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -615,7 +677,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -625,13 +689,15 @@
 				<string>applescript</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.apple.applescript.text</string>
 			</array>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -641,9 +707,11 @@
 				<string>as</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -654,9 +722,11 @@
 				<string>asa</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -669,9 +739,11 @@
 				<string>ashx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -681,9 +753,11 @@
 				<string>bib</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -693,9 +767,11 @@
 				<string>cs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -705,9 +781,11 @@
 				<string>cfdg</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -717,9 +795,11 @@
 				<string>csv</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -729,9 +809,11 @@
 				<string>tsv</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -742,9 +824,11 @@
 				<string>fcgi</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -757,9 +841,11 @@
 				<string>htaccess</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -769,9 +855,11 @@
 				<string>css</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -781,9 +869,11 @@
 				<string>dtd</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -793,9 +883,11 @@
 				<string>dylan</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -806,9 +898,11 @@
 				<string>hrl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -818,9 +912,11 @@
 				<string>fscript</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -831,9 +927,11 @@
 				<string>lhs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -843,9 +941,11 @@
 				<string>inc</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -855,9 +955,11 @@
 				<string>ics</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -867,9 +969,11 @@
 				<string>ini</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -879,9 +983,11 @@
 				<string>io</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -891,9 +997,11 @@
 				<string>bsh</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -903,9 +1011,11 @@
 				<string>properties</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -915,9 +1025,11 @@
 				<string>jsp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -932,9 +1044,11 @@
 				<string>el</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -944,9 +1058,11 @@
 				<string>log</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -958,9 +1074,11 @@
 				<string>mediawiki</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -971,9 +1089,11 @@
 				<string>eps</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -984,9 +1104,11 @@
 				<string>sch</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -996,9 +1118,11 @@
 				<string>sql</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1008,9 +1132,11 @@
 				<string>tcl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1021,9 +1147,11 @@
 				<string>xslt</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1034,9 +1162,11 @@
 				<string>vcard</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1046,9 +1176,11 @@
 				<string>vb</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1059,9 +1191,11 @@
 				<string>yml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1072,9 +1206,11 @@
 				<string>gtdlog</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1087,9 +1223,15 @@
 				<string>md</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>net.daringfireball.markdown</string>
+			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1099,9 +1241,11 @@
 				<string>rst</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1111,9 +1255,11 @@
 				<string>vba</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1124,9 +1270,11 @@
 				<string>vhdl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1136,13 +1284,15 @@
 				<string>lua</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/x-lua-script</string>
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1152,9 +1302,11 @@
 				<string>v</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1164,9 +1316,11 @@
 				<string>vh</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -1179,11 +1333,13 @@
 				<string>pl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Terminal scripts</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>CFBundleTypeName</key>
@@ -1207,7 +1363,7 @@
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string>AppIcon.icns</string>
+			<string>Ghostty.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>Any File</string>
 			<key>CFBundleTypeRole</key>
