@@ -439,6 +439,26 @@ class AppDelegate: NSObject,
     }
 
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+        return openPathInNewSurface(filename)
+    }
+
+    func application(_ application: NSApplication, open urls: [URL]) {
+        var didOpenPath = false
+        for url in urls {
+            for path in openPaths(from: url) {
+                if openPathInNewSurface(path) {
+                    didOpenPath = true
+                }
+            }
+        }
+
+        guard didOpenPath else { return }
+        NSApp.activate(ignoringOtherApps: true)
+        NSApp.unhide(nil)
+        NSApp.arrangeInFront(nil)
+    }
+
+    private func openPathInNewSurface(_ filename: String) -> Bool {
         // Ghostty will validate as well but we can avoid creating an entirely new
         // surface by doing our own validation here. We can also show a useful error
         // this way.
@@ -457,6 +477,9 @@ class AppDelegate: NSObject,
             // When opening a directory, check the configuration to decide
             // whether to open in a new tab or new window.
             config.workingDirectory = filename
+        } else if let command = openFileCommand(for: filename) {
+            config.initialInput = "\(command) \(Ghostty.Shell.quote(filename))\n"
+            config.workingDirectory = (filename as NSString).deletingLastPathComponent
         } else {
             // Unconditionally require confirmation in the file execution case.
             // In the future I have ideas about making this more fine-grained if
@@ -511,6 +534,44 @@ class AppDelegate: NSObject,
         }
 
         return true
+    }
+
+    private func openPaths(from url: URL) -> [String] {
+        if url.isFileURL {
+            return [url.path]
+        }
+
+        guard url.scheme?.lowercased() == "ghostty" else { return [] }
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return [] }
+        guard components.host?.lowercased() == "open" else { return [] }
+
+        return components.queryItems?
+            .filter { $0.name == "file" || $0.name == "path" }
+            .compactMap { item in
+                guard let value = item.value, !value.isEmpty else { return nil }
+
+                if let candidate = URL(string: value), candidate.isFileURL {
+                    return candidate.path
+                }
+
+                return NSString(string: value).expandingTildeInPath
+            } ?? []
+    }
+
+    private func openFileCommand(for filename: String) -> String? {
+        let ext = (filename as NSString).pathExtension.lowercased()
+        guard !ext.isEmpty else { return nil }
+
+        for entry in ghostty.config.macosOpenFileCommands {
+            let normalized = entry.matcher.trimmingCharacters(in: .whitespacesAndNewlines)
+                .lowercased()
+            let matcher = normalized.hasPrefix(".") ? String(normalized.dropFirst()) : normalized
+            if matcher == ext {
+                return entry.command
+            }
+        }
+
+        return nil
     }
 
     /// This is called for the dock right-click menu.

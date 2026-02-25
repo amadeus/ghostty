@@ -3261,6 +3261,26 @@ keybind: Keybinds = .{},
 /// platforms.
 @"macos-dock-drop-behavior": MacOSDockDropBehavior = .@"new-tab",
 
+/// Configure commands to run when opening files with Ghostty on macOS.
+///
+/// This setting is repeatable and each value must be `matcher=command`.
+/// The matcher is a file extension and can be written with or without a
+/// leading `.` (for example, `md` and `.md` are equivalent).
+///
+/// Example:
+///
+///   * `macos-open-file-command = md=nvim`
+///
+/// This causes `README.md` opened via Finder or URL handlers to open in
+/// a Ghostty window running `nvim README.md`.
+///
+/// The command is executed through the configured shell by sending input to
+/// the new surface and appending a shell-escaped file path argument.
+///
+/// This setting is only supported on macOS and has no effect on other
+/// platforms.
+@"macos-open-file-command": RepeatableOpenFileCommand = .{},
+
 /// macOS doesn't have a distinct "alt" key and instead has the "option"
 /// key which behaves slightly differently. On macOS by default, the
 /// option key plus a character will sometimes produce a Unicode character.
@@ -8470,6 +8490,171 @@ pub const ShellIntegrationFeatures = packed struct {
 
 pub const SplitPreserveZoom = packed struct {
     navigation: bool = false,
+};
+
+pub const RepeatableOpenFileCommand = struct {
+    const Self = @This();
+
+    pub const Entry = struct {
+        matcher: [:0]const u8,
+        command: [:0]const u8,
+
+        pub fn equal(self: Entry, other: Entry) bool {
+            return std.mem.eql(u8, self.matcher, other.matcher) and
+                std.mem.eql(u8, self.command, other.command);
+        }
+    };
+
+    value: std.ArrayListUnmanaged(Entry) = .empty,
+    value_c: std.ArrayListUnmanaged(CEntry) = .empty,
+
+    pub const CEntry = extern struct {
+        matcher: [*:0]const u8,
+        command: [*:0]const u8,
+    };
+
+    /// ghostty_config_open_file_command_list_s
+    pub const C = extern struct {
+        commands: [*]CEntry,
+        len: usize,
+    };
+
+    pub fn cval(self: *const Self) C {
+        return .{
+            .commands = self.value_c.items.ptr,
+            .len = self.value_c.items.len,
+        };
+    }
+
+    pub fn parseCLI(
+        self: *Self,
+        alloc: Allocator,
+        input_: ?[]const u8,
+    ) !void {
+        const input = input_ orelse "";
+        if (input.len == 0) {
+            self.value.clearRetainingCapacity();
+            self.value_c.clearRetainingCapacity();
+            return;
+        }
+
+        const idx = std.mem.indexOfScalar(u8, input, '=') orelse return error.ValueRequired;
+        const matcher_raw = std.mem.trim(u8, input[0..idx], &std.ascii.whitespace);
+        const command_raw = std.mem.trim(u8, input[idx + 1 ..], &std.ascii.whitespace);
+        if (matcher_raw.len == 0) return error.ValueRequired;
+        if (command_raw.len == 0) return error.ValueRequired;
+
+        var matcher_view = matcher_raw;
+        while (matcher_view.len > 0 and matcher_view[0] == '.') {
+            matcher_view = matcher_view[1..];
+        }
+        if (matcher_view.len == 0) return error.ValueRequired;
+
+        const matcher = try alloc.alloc(u8, matcher_view.len + 1);
+        errdefer alloc.free(matcher);
+        for (matcher_view, 0..) |ch, i| {
+            matcher[i] = std.ascii.toLower(ch);
+        }
+        matcher[matcher_view.len] = 0;
+
+        const command = try alloc.dupeZ(u8, command_raw);
+        errdefer alloc.free(command);
+
+        try self.value.append(alloc, .{
+            .matcher = matcher[0..matcher_view.len :0],
+            .command = command,
+        });
+        try self.value_c.append(alloc, .{
+            .matcher = self.value.items[self.value.items.len - 1].matcher.ptr,
+            .command = self.value.items[self.value.items.len - 1].command.ptr,
+        });
+    }
+
+    pub fn clone(self: *const Self, alloc: Allocator) Allocator.Error!Self {
+        var value: std.ArrayListUnmanaged(Entry) = .empty;
+        errdefer value.deinit(alloc);
+        try value.ensureTotalCapacity(alloc, self.value.items.len);
+
+        var value_c: std.ArrayListUnmanaged(CEntry) = .empty;
+        errdefer value_c.deinit(alloc);
+        try value_c.ensureTotalCapacity(alloc, self.value_c.items.len);
+
+        for (self.value.items) |item| {
+            const matcher = try alloc.dupeZ(u8, item.matcher);
+            const command = try alloc.dupeZ(u8, item.command);
+            value.appendAssumeCapacity(.{ .matcher = matcher, .command = command });
+            value_c.appendAssumeCapacity(.{ .matcher = matcher.ptr, .command = command.ptr });
+        }
+
+        return .{
+            .value = value,
+            .value_c = value_c,
+        };
+    }
+
+    pub fn equal(self: Self, other: Self) bool {
+        if (self.value.items.len != other.value.items.len) return false;
+        for (self.value.items, other.value.items) |a, b| {
+            if (!a.equal(b)) return false;
+        }
+
+        return true;
+    }
+
+    pub fn formatEntry(self: Self, formatter: formatterpkg.EntryFormatter) !void {
+        if (self.value.items.len == 0) {
+            try formatter.formatEntry(void, {});
+            return;
+        }
+
+        for (self.value.items) |item| {
+            var buf: [4096]u8 = undefined;
+            const value = std.fmt.bufPrint(
+                &buf,
+                "{s}={s}",
+                .{ item.matcher, item.command },
+            ) catch |err| switch (err) {
+                error.NoSpaceLeft => return error.OutOfMemory,
+            };
+            try formatter.formatEntry([]const u8, value);
+        }
+    }
+
+    test "RepeatableOpenFileCommand parseCLI" {
+        const testing = std.testing;
+        var arena = ArenaAllocator.init(testing.allocator);
+        defer arena.deinit();
+        const alloc = arena.allocator();
+
+        var list: Self = .{};
+        try list.parseCLI(alloc, ".md=nvim");
+        try list.parseCLI(alloc, "MARKDOWN=helix");
+
+        try testing.expectEqual(@as(usize, 2), list.value.items.len);
+        try testing.expectEqualStrings("md", list.value.items[0].matcher);
+        try testing.expectEqualStrings("nvim", list.value.items[0].command);
+        try testing.expectEqualStrings("markdown", list.value.items[1].matcher);
+        try testing.expectEqualStrings("helix", list.value.items[1].command);
+
+        try list.parseCLI(alloc, "");
+        try testing.expectEqual(@as(usize, 0), list.value.items.len);
+        try testing.expectEqual(@as(usize, 0), list.value_c.items.len);
+    }
+
+    test "RepeatableOpenFileCommand formatConfig" {
+        const testing = std.testing;
+        var arena = ArenaAllocator.init(testing.allocator);
+        defer arena.deinit();
+        const alloc = arena.allocator();
+
+        var list: Self = .{};
+        try list.parseCLI(alloc, ".md=nvim");
+
+        var buf: std.Io.Writer.Allocating = .init(testing.allocator);
+        defer buf.deinit();
+        try list.formatEntry(formatterpkg.entryFormatter("a", &buf.writer));
+        try std.testing.expectEqualSlices(u8, "a = md=nvim\n", buf.written());
+    }
 };
 
 pub const RepeatableCommand = struct {

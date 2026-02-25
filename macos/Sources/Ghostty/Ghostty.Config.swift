@@ -343,6 +343,21 @@ extension Ghostty {
             return MacDockDropBehavior(rawValue: str) ?? defaultValue
         }
 
+        var macosOpenFileCommands: [OpenFileCommand] {
+            guard let config = self.config else { return [] }
+            var v: ghostty_config_open_file_command_list_s = .init()
+            let key = "macos-open-file-command"
+            guard ghostty_config_get(config, &v, key, UInt(key.lengthOfBytes(using: .utf8))) else { return [] }
+            guard v.len > 0 else { return [] }
+            let buffer = UnsafeBufferPointer(start: v.commands, count: v.len)
+            return buffer.map { entry in
+                OpenFileCommand(
+                    matcher: String(cString: entry.matcher),
+                    command: String(cString: entry.command)
+                )
+            }
+        }
+
         var macosWindowShadow: Bool {
             guard let config = self.config else { return false }
             var v = false
@@ -680,6 +695,11 @@ extension Ghostty {
 // MARK: Configuration Enums
 
 extension Ghostty.Config {
+    struct OpenFileCommand: Equatable {
+        let matcher: String
+        let command: String
+    }
+
     enum AutoUpdate: String {
         case off
         case check
